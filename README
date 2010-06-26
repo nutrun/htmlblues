@@ -1,0 +1,1 @@
+Clone, cd in the cloned dir, start the app by running `ruby lib/sitemap.rb`, then `open http://localhost:4567/index.html`

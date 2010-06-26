@@ -1,0 +1,40 @@
+=rounded($radius)
+  border-radius: $radius
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+
+=shadow($size)
+  box-shadow: 0 0 $size #8b7155
+  -moz-box-shadow: 0 0 $size #8b7155
+  -webkit-box-shadow: 8px 8px $size #8b7155
+
+body
+  background-color: #a99570
+
+a
+  color: #7f0000
+  text-decoration: none
+
+a:hover
+  color: #400000
+
+p
+  margin-bottom: 1em
+
+code
+  font-family: courier
+  font-size: 0.9em
+  color: #491e42
+
+#content
+  font-family: "IM Fell English", arial, serif
+  text-align: center
+  background-color: #bec0ca
+  color: #6c4a36
+  margin: 5% 15%
+  padding: 3em
+  border: 25px solid #491e42
+  +rounded(unquote("15px"))
+  +shadow(unquote("10px"))
+  h1
+    font-size: 6em
