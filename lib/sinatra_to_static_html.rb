@@ -1,5 +1,6 @@
 require "fileutils"
 require "rest_client"
+require "find"
 
 class SinatraToStaticHtml
   def initialize(paths=[], outdir=File.join(File.dirname(__FILE__), '..', 'out'))
@@ -15,6 +16,11 @@ class SinatraToStaticHtml
     end
   end
   
+  def copy_public_artifacts
+    pubdir = File.join(File.dirname(__FILE__), '..', 'public', '*')
+    Dir[pubdir].each { |e| FileUtils.cp_r(e, @outdir) }
+  end
+  
   def clean
     FileUtils.rm_rf(@outdir)
   end
@@ -23,7 +29,9 @@ class SinatraToStaticHtml
     require File.expand_path(File.join(File.dirname(__FILE__), 'sitemap'))
     routes = Sinatra::Application.routes["GET"].map { |i| i[0].to_s }
     paths = routes.map { |r| r.match(/\?\-mix\:\^\\(.*)\$/)[1].gsub('\\', '') }
-    self.new(paths).make_html
+    inst = self.new(paths)
+    inst.make_html
+    inst.copy_public_artifacts
   end
   
   def self.clean
