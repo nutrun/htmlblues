@@ -4,6 +4,7 @@ require "haml"
 require File.expand_path(File.join(File.dirname(__FILE__), 'sinatra_reloader'))
 
 set :views, File.join(File.dirname(__FILE__), '..', 'views')
+set :public, File.join(File.dirname(__FILE__), '..', 'public')
 set :haml, { :attr_wrapper => '"' }
 
 get('/index.html') { haml :index }

@@ -1,3 +1,3 @@
-function hello () {
-  alert('hello');
-}
+$(function (){
+  $('#content').hide().fadeIn();
+})
