@@ -18,3 +18,8 @@ task :deploy do
   puts "Uncomment and edit Rakefile:19 to enable"
   # Rake::SshDirPublisher.new('you@yourserver.com', '/var/www/whatevs', 'out').upload
 end
+
+desc 'Install needed gems'
+task :gems do
+  puts `gem i sinatra haml rest-client --no-ri --no-rdoc`
+end
