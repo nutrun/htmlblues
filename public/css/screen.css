@@ -9,13 +9,17 @@ h1 {
   font-weight: bold;
   font-size: 2em;
   margin-bottom: 1em;
-  border-bottom: solid 4px red;
   text-align: right;
+  border-bottom: solid 4px #488AC7;
 }
 
 a {
   text-decoration: none;
-  color: #0000FF;
+  color: #488AC7;
+}
+
+a:hover {
+  color: #153E7E;
 }
 
 p {
