@@ -1,3 +1,3 @@
 $(function (){
-  $('#content').hide().fadeIn();
+  $('#site').hide().fadeIn('slow');
 })

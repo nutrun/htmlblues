@@ -21,5 +21,5 @@ end
 
 desc 'Install needed gems'
 task :gems do
-  puts `gem i sinatra haml rest-client --no-ri --no-rdoc`
+  puts `gem i sinatra rest-client --no-ri --no-rdoc`
 end

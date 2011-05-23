@@ -3,4 +3,4 @@
 - Run `ruby lib/sitemap.rb` to start the app
 - Open http://localhost:4567/index.html
 
-(Gems needed: sinatra, haml, rest-client)
+(Gems needed: sinatra, rest-client)
